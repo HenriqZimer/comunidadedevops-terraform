@@ -29,7 +29,10 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | The CIDR block for the VPC | `string` | n/a | yes |
+| <a name="input_eks_tf_s3_bucket"></a> [eks\_tf\_s3\_bucket](#input\_eks\_tf\_s3\_bucket) | The S3 bucket for storing EKS Terraform state | `map(string)` | <pre>{<br/>  "bucket": "henriqzimer-comunidadedevops",<br/>  "key": "dev/terraform.tfstate"<br/>}</pre> | no |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | The name of the project | `string` | `"comunidadedevops"` | no |
+| <a name="input_region"></a> [region](#input\_region) | The AWS region to deploy resources in | `string` | `"us-east-1"` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to apply to resources | `map(string)` | <pre>{<br/>  "Department": "DevOps",<br/>  "Environment": "Development",<br/>  "Organization": "Infraestrutura and Operations",<br/>  "Project": "EKS"<br/>}</pre> | no |
 
 ## Outputs
 

@@ -14,14 +14,14 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "henriqzimer-comunidadedevops"
-    key    = "dev/terraform.tfstate"
-    region = "us-east-1"
+    bucket = var.eks_tf_s3_bucket.bucket
+    key    = var.eks_tf_s3_bucket.key
+    region = var.region
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 provider "kubernetes" {
