@@ -21,3 +21,6 @@ output:
 
 show:
 	@terraform show
+
+aws-eks:
+	@aws aws eks update-kubeconfig --region us-east-1 --name eksdevelopment-eks-cluster
