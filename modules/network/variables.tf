@@ -6,11 +6,9 @@ variable "cidr_block" {
 variable "project_name" {
   description = "The name of the project"
   type        = string
-  default     = "comunidadedevops"
 }
 
 variable "tags" {
   description = "A map of tags to assign to the resources"
   type        = map(string)
-  default     = {}
 }

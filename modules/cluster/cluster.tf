@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "eks_cluster" {
-  name     = "${var.project_name}-eks-cluster"
+  name     = "${var.project_name}-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
 
   vpc_config {
@@ -18,7 +18,7 @@ resource "aws_eks_cluster" "eks_cluster" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-eks-cluster"
+      Name = "${var.project_name}-cluster"
     }
   )
 }
